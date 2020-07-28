@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <mt-header title="信息管理系统" class="mt-header">
+    <mt-header title="信息管理系统" class="mt-header" fixed="true">
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
     <router-view/>
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" fixed="true">
       <mt-tab-item id="home">
         <img slot="icon" src="./assets/3.png">
         首页
@@ -16,7 +16,7 @@
         <img slot="icon" src="./assets/4.png">
         发现
       </mt-tab-item>
-      <mt-tab-item id="shopCar">
+      <mt-tab-item id="cart">
         <img slot="icon" src="./assets/2.png">
         购物车
       </mt-tab-item>
@@ -39,17 +39,13 @@ export default {
   watch:{
     selected:function (newV,oldV) {
       console.log(newV);
-      this.$route.push({name:this.selected});
+      this.$router.push({name:this.selected});
     }  
   }
 }
 </script>
 
 <style>
-*{
-  padding:0;
-  margin:0;
-;
-}
+
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <mt-header title="信息管理系统">
+    <mt-header title="信息管理系统" class="mt-header">
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
